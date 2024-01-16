@@ -16,9 +16,7 @@ export const AppReducer = (state, action) => {
             })
             state.expenses = new_expenses;
             action.type = "DONE";
-            return {
-                ...state,
-            };
+            return state;
 
             case 'RED_QUANTITY':
                 state.expenses.map((expense)=>{
@@ -31,9 +29,8 @@ export const AppReducer = (state, action) => {
                 })
                 state.expenses = new_expenses;
                 action.type = "DONE";
-                return {
-                    ...state,
-                };
+                return state;
+
         case 'DELETE_ITEM':
             state.expenses.map((expense)=>{
                 if(expense.name === action.payload.name) {
@@ -44,15 +41,11 @@ export const AppReducer = (state, action) => {
             })
             state.expenses = new_expenses;
             action.type = "DONE";
-            return {
-                ...state,
-            };
+            return state;
     case 'CHG_LOCATION':
             action.type = "DONE";
             state.Location = action.payload;
-            return {
-                ...state
-            }
+            return state;
 
         default:
             return state;
