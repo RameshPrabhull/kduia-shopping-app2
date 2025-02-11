@@ -7,8 +7,10 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>Hello from developer ramesh</h1>
     <App />
+    <div className="amplify">
+      <footer>Developed by ramesh_ll</footer>
+    </div>
   </React.StrictMode>
 );
 
